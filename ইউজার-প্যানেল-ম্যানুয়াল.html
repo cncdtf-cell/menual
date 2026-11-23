@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="icon.png">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="সরদার হাট তাফসিরুল ওয়াজ মাহফিলের ইউজার প্যানেল ব্যবহারের ধাপে-ধাপে নির্দেশিকা।">
+  <title>ইউজার প্যানেল · ব্যবহার নির্দেশিকা</title>
+  <style>
+    :root{--forest:#103f32;--forest-2:#17644e;--gold:#bf9143;--ink:#17231e;--muted:#607169;--line:#dce7e1;--wash:#f3f7f4;--cream:#fffaf0;--blue:#eff6ff;--red:#fff2f0}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:#eaf0ec;color:var(--ink);font:16px/1.75,"Noto Sans Bengali","Hind Siliguri","Segoe UI",sans-serif}
+    a{color:var(--forest-2);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .sheet{max-width:1000px;margin:28px auto;background:#fff;box-shadow:0 18px 55px #183d2d18}
+    .cover{position:relative;overflow:hidden;padding:54px 64px 46px;background:linear-gradient(125deg,#0d382d,#17634c 72%,#207359);color:#fff}
+    .cover:after{content:"";position:absolute;width:270px;height:270px;border:1px solid #ffffff20;border-radius:50%;right:-65px;top:-105px;box-shadow:0 0 0 28px #ffffff08,0 0 0 56px #ffffff06}
+    .eyebrow{position:relative;z-index:1;margin:0 0 12px;color:#eed8aa;font-size:13px;font-weight:700;letter-spacing:.08em}
+    h1{position:relative;z-index:1;margin:0;font-size:38px;line-height:1.3}
+    .cover-sub{position:relative;z-index:1;margin:10px 0 0;color:#e3eee8;font-size:18px}
+    .meta{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+    .meta span{padding:5px 12px;border:1px solid #ffffff35;border-radius:30px;background:#ffffff0b;font-size:12px}
+    main{padding:36px 64px 60px}
+    .intro{margin:0 0 24px;padding:17px 20px;border:1px solid #d5e8dc;border-left:4px solid #25825e;border-radius:10px;background:#f1faf4}
+    .intro strong{color:var(--forest)}
+    .toc{margin:24px 0 38px;padding:24px 28px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(145deg,#f8fbf9,#f0f6f2)}
+    .toc h2{margin:0 0 14px;border:0;padding:0;font-size:22px}
+    .toc ol{display:grid;grid-template-columns:1fr 1fr;gap:3px 28px;margin:0;padding-left:22px}
+    .toc li{padding:3px 0 3px 2px;color:var(--forest-2)}
+    h2{margin:44px 0 14px;padding:0 0 10px;border-bottom:1px solid var(--line);color:var(--forest);font-size:25px;line-height:1.4;scroll-margin-top:16px}
+    h3{margin:23px 0 8px;color:var(--forest-2);font-size:19px}
+    p{margin:10px 0}
+    code{padding:1px 5px;border-radius:5px;background:#edf3ef;color:var(--forest);font: .94em ui-monospace,Consolas,monospace}
+    ul,ol{padding-left:24px}
+    li{margin:4px 0}
+    .lead{font-size:17px;color:#3b4e45}
+    .note,.warning,.tip{margin:14px 0;padding:13px 16px;border-radius:9px}
+    .note{border-left:4px solid #6584a6;background:var(--blue)}
+    .warning{border-left:4px solid #c96558;background:var(--red)}
+    .tip{border-left:4px solid var(--gold);background:var(--cream)}
+    .tag{display:inline-block;padding:2px 9px;border-radius:99px;background:#e8f2ec;color:var(--forest);font-size:12px;font-weight:700}
+    figure{margin:20px auto 24px;text-align:center;break-inside:avoid}
+    figure img{display:block;width:min(100%,390px);height:auto;margin:0 auto;border:1px solid var(--line);border-radius:18px;box-shadow:0 12px 30px #173a2c20}
+    figcaption{max-width:620px;margin:9px auto 0;color:var(--muted);font-size:13px}
+    .marked-shot{position:relative;width:min(100%,390px);margin:20px auto 24px}
+    .marked-shot img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:18px;box-shadow:0 12px 30px #173a2c20}
+    .dot-ring{position:absolute;top:2.1%;right:4.7%;width:34px;height:34px;border:3px solid #e6a534;border-radius:50%;box-shadow:0 0 0 4px #103f3270;background:#e6a53420}
+    .dot-label{position:absolute;top:7.7%;right:4%;padding:4px 9px;border:1px solid #e6a534;border-radius:7px;background:#fffaf0;color:#5a3d0a;font-size:12px;font-weight:700;box-shadow:0 3px 9px #0002}
+    .dot-label:before{content:"";position:absolute;right:13px;top:-7px;width:10px;height:10px;transform:rotate(45deg);border-left:1px solid #e6a534;border-top:1px solid #e6a534;background:#fffaf0}
+    .table-wrap{overflow-x:auto;margin:15px 0;border:1px solid var(--line);border-radius:11px}
+    table{width:100%;border-collapse:collapse;font-size:14px;line-height:1.65}
+    th{padding:11px 13px;background:var(--forest);color:#fff;text-align:left;white-space:nowrap}
+    td{padding:10px 13px;border-top:1px solid var(--line);vertical-align:top}
+    tr:nth-child(even) td{background:#f8fbf9}
+    .steps{counter-reset:step;display:grid;gap:9px;margin:14px 0;padding:0;list-style:none}
+    .steps li{counter-increment:step;position:relative;margin:0;padding:11px 14px 11px 48px;border:1px solid var(--line);border-radius:10px;background:#fff}
+    .steps li:before{content:counter(step);position:absolute;left:13px;top:11px;display:grid;place-items:center;width:25px;height:25px;border-radius:50%;background:var(--forest);color:#fff;font-size:13px;font-weight:700}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:14px 0}
+    .card{padding:15px 17px;border:1px solid var(--line);border-radius:12px;background:#fff}
+    .card strong{display:block;margin-bottom:3px;color:var(--forest)}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+    .footer{margin-top:42px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+    .footer b{color:var(--forest)}
+    @media(max-width:720px){
+      body{font-size:15px;background:#fff}
+      .sheet{margin:0;box-shadow:none}
+      .cover{padding:37px 24px 32px}
+      h1{font-size:30px}
+      .cover-sub{font-size:16px}
+      main{padding:25px 20px 42px}
+      .toc{padding:19px}
+      .toc ol,.grid,.split{grid-template-columns:1fr}
+      h2{font-size:22px}
+    }
+    @media print{
+      @page{size:A4;margin:16mm}
+      body{background:#fff;font-size:11pt}
+      .sheet{max-width:none;margin:0;box-shadow:none}
+      .cover{padding:28px 34px}
+      main{padding:25px 34px}
+      a{color:inherit;text-decoration:none}
+      .toc,.card,.note,.warning,.tip,figure,.marked-shot{break-inside:avoid}
+      h2{break-after:avoid}
+      .table-wrap{overflow:visible}
+      table{font-size:9pt}
+    }
+  </style>
+</head>
+<body>
+<article class="sheet">
+  <header class="cover">
+    <p class="eyebrow">ব্যবহারকারীর নির্দেশিকা · সংস্করণ ১.২</p>
+    <h1>ইউজার প্যানেল</h1>
+    <p class="cover-sub">ব্যবহার, নেভিগেশন ও সমস্যা সমাধান</p>
+    <div class="meta">
+      <span>সরদার হাট তাফসিরুল ওয়াজ মাহফিল</span>
+      <span>সদস্য ও সাধারণ ব্যবহারকারীর জন্য</span>
+      <span>হালনাগাদ: ২৩ নভেম্বর ২০২৬</span>
+    </div>
+  </header>
+  <main>
+    <div class="intro"><strong>এই নির্দেশিকা ব্যবহার করুন:</strong> যে আইকন বা কাজটি খুঁজছেন, সূচিপত্র থেকে সেই অংশে যান। অ্যাকাউন্টের ভূমিকা ও অ্যাডমিন-অনুমতির ভিত্তিতে কিছু পেজ/বোতাম দেখা নাও যেতে পারে—এটি সবসময় ত্রুটি নয়।</div>
+
+    <nav class="toc" aria-label="সূচিপত্র">
+      <h2>সূচিপত্র</h2>
+      <ol>
+        <li><a href="#start">শুরু করার আগে</a></li>
+        <li><a href="#login">লগইন ও প্রথম স্ক্রিন</a></li>
+        <li><a href="#topbar">উপরের বারের আইকন</a></li>
+        <li><a href="#bottom">নিচের বারের বোতাম</a></li>
+        <li><a href="#profile-menu">তিন-ডট <code>⋮</code> প্রোফাইল মেনু</a></li>
+        <li><a href="#page-menu"><code>☰ মেনু</code>: সব পেজের তালিকা</a></li>
+        <li><a href="#home">হোম ও সারসংক্ষেপ</a></li>
+        <li><a href="#donations">আমার অনুদান ও রিসিপ্ট</a></li>
+        <li><a href="#pages">অন্যান্য পেজে কী পাবেন</a></li>
+        <li><a href="#chat">চ্যাট ও দ্রুত যোগাযোগ</a></li>
+        <li><a href="#account">প্রোফাইল, অনুরোধ ও নোটিফিকেশন</a></li>
+        <li><a href="#troubleshooting">সমস্যা ও সমাধান</a></li>
+        <li><a href="#safety">নিরাপদে ব্যবহার</a></li>
+      </ol>
+    </nav>
+
+    <section id="start">
+      <h2>১ · শুরু করার আগে</h2>
+      <div class="grid">
+        <div class="card"><strong>যে ডিভাইসেই হোক</strong>মোবাইল বা কম্পিউটারে আধুনিক Chrome, Edge বা Safari ব্যবহার করুন। লম্বা তালিকা দেখতে স্ক্রল করুন।</div>
+        <div class="card"><strong>বোতামের নাম আলাদা হতে পারে</strong>অ্যাডমিন নাম বা লেআউট বদলাতে পারেন। একই অর্থের আইকন/বোতাম খুঁজুন।</div>
+      </div>
+      <div class="note"><b>অনুমতি:</b> <code>🔒</code> বা “এই তথ্য দেখার অনুমতি আপনার নেই” দেখালে অ্যাডমিনকে বলুন। অনুমতি ছাড়া তথ্য দেখা/পরিবর্তনের চেষ্টা করবেন না।</div>
+    </section>
+
+    <section id="login">
+      <h2>২ · লগইন ও প্রথম স্ক্রিন</h2>
+      <figure><img src="screenshots/00-mobile-login.png" alt="মোবাইল লগইন স্ক্রিন"><figcaption>নিবন্ধিত ইমেইল ও পাসওয়ার্ড দিয়ে লগইন করুন।</figcaption></figure>
+      <ol class="steps">
+        <li>আপনার নিবন্ধিত ইমেইল লিখুন।</li>
+        <li>পাসওয়ার্ড লিখে <b>লগইন করুন</b> চাপুন।</li>
+        <li>লগইন সফল হলে অনুমতি অনুযায়ী হোম, নিজের তথ্য বা আগে খোলা পেজ দেখাবে।</li>
+      </ol>
+      <div class="warning">পাসওয়ার্ড ভুলে গেলে/অ্যাকাউন্টে ঢুকতে না পারলে অ্যাডমিনের সহায়তা নিন। পাসওয়ার্ড বা OTP কাউকে পাঠাবেন না।</div>
+    </section>
+
+    <section id="topbar">
+      <h2>৩ · উপরের বারের আইকনগুলোর কাজ</h2>
+      <p>প্রতিষ্ঠানের নামের ডানদিকে আইকনগুলো থাকে। স্ক্রিন বা অনুমতি অনুযায়ী সব আইকন নাও দেখা যেতে পারে।</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>আইকন</th><th>চাপলে কী হবে</th></tr></thead>
+        <tbody>
+          <tr><td>👥 সক্রিয় সদস্য</td><td>বর্তমানে অনলাইনে থাকা সদস্যদের তালিকা/প্যানেল খোলে। পাশের সংখ্যা অনলাইন সদস্যের সংখ্যা।</td></tr>
+          <tr><td>🔔 নোটিফিকেশন</td><td>নতুন ইনবক্স/নোটিফিকেশন থাকলে সংশ্লিষ্ট ইনবক্স খোলে; না থাকলে নোটিফিকেশন পেজে নেয়। অনুমতি না থাকলে আইকনটি নাও দেখা যেতে পারে।</td></tr>
+          <tr><td>🔍 সার্চ</td><td>নাম, আইডি, মাস/তারিখ, নোটিশ, চ্যাট বা মেনুর বিষয় খুঁজুন। ফলাফলে চাপলে সংশ্লিষ্ট পেজে যাবে।</td></tr>
+          <tr><td><code>⋮</code> তিনটি ডট</td><td><b>প্রোফাইল ও অ্যাপ-সেটিংস প্যানেল</b> খোলে—নিচের <code>☰ মেনু</code> নয়। বিস্তারিত পরের অংশে।</td></tr>
+        </tbody>
+      </table></div>
+      <div class="marked-shot">
+        <img src="screenshots/10-mobile-profile.png" alt="উপরের ডানদিকে তিন-ডট আইকনসহ মোবাইল স্ক্রিন">
+        <span class="dot-ring" aria-hidden="true"></span><span class="dot-label">এখানে চাপুন</span>
+        <figcaption>চিহ্নিত <code>⋮</code> চাপলে প্রোফাইল প্যানেল খুলবে। ছবির ব্যক্তিগত তথ্য গোপনীয়তার জন্য অস্পষ্ট করা হয়েছে।</figcaption>
+      </div>
+    </section>
+
+    <section id="bottom">
+      <h2>৪ · নিচের বারের প্রতিটি বোতামের কাজ</h2>
+      <figure><img src="screenshots/02-mobile-menu.png" alt="নিচের নেভিগেশন বার ও পেজ-মেনু"><figcaption>মোবাইলের নিচের বার থেকে ঘনঘন ব্যবহৃত পেজে যাওয়া যায়।</figcaption></figure>
+      <div class="table-wrap"><table>
+        <thead><tr><th>বোতাম</th><th>কাজ</th><th>শর্ত/টিপস</th></tr></thead>
+        <tbody>
+          <tr><td>🏠 <b>হোম</b></td><td>সারসংক্ষেপ/ড্যাশবোর্ডে ফেরে।</td><td>শুধু ব্যক্তিগত ভিউ থাকলে নিজের তথ্যের পেজে ফিরতে পারে।</td></tr>
+          <tr><td>💰 <b>সংগ্রহ</b></td><td>সংগ্রহের দ্রুত ফর্ম/শিট খোলে।</td><td>সংগ্রহের অনুমতি থাকলেই দেখা যায়।</td></tr>
+          <tr><td>🎁 <b>আমার অনুদান</b></td><td>আপনার সঙ্গে যুক্ত মাসিক ও বার্ষিক/এককালীন অনুদানের পেজ খোলে।</td><td>রেকর্ড না মিললে অ্যাডমিনকে জানান।</td></tr>
+          <tr><td>🔍 <b>সার্চ</b></td><td>দ্রুত সার্চ বক্স খোলে।</td><td>ফলাফলে চাপলে সংশ্লিষ্ট স্থানে যায়।</td></tr>
+          <tr><td>💬 <b>চ্যাট</b></td><td>চ্যাট পেজে যায়।</td><td>নতুন বার্তার সংখ্যা ব্যাজে দেখা যেতে পারে।</td></tr>
+          <tr><td>☰ <b>মেনু</b></td><td>অ্যাকাউন্টে প্রবেশযোগ্য পেজগুলোর গ্রিড খোলে।</td><td>পেজ খুলতে একটি কার্ড বাছুন।</td></tr>
+        </tbody>
+      </table></div>
+      <div class="tip"><b>দুটো মেনু গুলিয়ে ফেলবেন না:</b> উপরের <code>⋮</code> = প্রোফাইল/সেটিংস। নিচের <code>☰ মেনু</code> = পেজের তালিকা। নিচের মেনু বন্ধ করতে <code>×</code> চাপুন বা কোনো পেজ বেছে নিন।</div>
+    </section>
+
+    <section id="profile-menu">
+      <h2>৫ · উপরের তিন-ডট <code>⋮</code> প্রোফাইল মেনু</h2>
+      <ol class="steps">
+        <li>স্ক্রিনের উপরের ডানদিকে <code>⋮</code> চাপুন। মোবাইলে প্রোফাইল প্যানেল নিচ থেকে উঠবে।</li>
+        <li>নিজের নাম/ইমেইল এবং উপলভ্য অ্যাকাউন্ট-তথ্য দেখুন।</li>
+        <li>প্রয়োজনীয় অ্যাকশন বাছুন। লম্বা প্যানেল হলে ভেতরে স্ক্রল করুন।</li>
+        <li>বন্ধ করতে <code>×</code>, প্যানেলের বাইরে চাপ, অথবা মোবাইলে প্যানেলের ওপরের অংশ ডানদিকে সোয়াইপ করুন।</li>
+      </ol>
+      <div class="table-wrap"><table>
+        <thead><tr><th>প্যানেলের অপশন</th><th>কী করে</th></tr></thead>
+        <tbody>
+          <tr><td>প্রোফাইল ছবি</td><td>ছবি থাকলে বড় করে দেখায়।</td></tr>
+          <tr><td>মোবাইল, গ্রুপ আইডি, দায়িত্ব, পিতা/স্বামীর নাম, অবস্থা, যোগদানের তারিখ</td><td>অ্যাকাউন্টের সঙ্গে যুক্ত তথ্য দেখায়। তথ্য লুকানো/ফাঁকা হলে রেকর্ড বা অনুমতি-সীমা হতে পারে।</td></tr>
+          <tr><td><b>প্রোফাইল সম্পাদনা</b></td><td>নিজের নাম, মোবাইল ও পিতা/স্বামীর নাম হালনাগাদের ফর্ম খোলে। গ্রুপ আইডি ও দায়িত্ব ব্যবহারকারী বদলাতে পারেন না।</td></tr>
+          <tr><td><b>আমার অ্যাকাউন্ট · থিম ও ফন্ট</b></td><td>অ্যাকাউন্ট/ব্যক্তিগত পেজ খোলে; সেখানে উপলভ্য থিম, ফন্ট ও ব্যক্তিগত অপশন দেখুন।</td></tr>
+          <tr><td><b>আমার অনুদানের তথ্য</b></td><td>নিজের অনুদান পেজে যায়। রেকর্ড না মিললে অ্যাডমিনকে ইমেইল/সদস্য রেকর্ড যাচাই করতে বলুন।</td></tr>
+          <tr><td><b>আমাদের সম্পর্কে</b></td><td>প্রতিষ্ঠানের পরিচিতি/যোগাযোগের পেজ খোলে। এখানেই <b>ইউজার প্যানেলের বাটন</b> অংশে ম্যানুয়াল ও অ্যাডমিন-চালু করা লিংক পাওয়া যাবে।</td></tr>
+          <tr><td><b>এআই চ্যাট বট</b></td><td>ফিচারটি চালু থাকলে এআই সহকারী খোলে। অপশন না থাকলে আপনার অ্যাকাউন্টে এটি নেই।</td></tr>
+          <tr><td><b>চ্যাট বট দেখান</b></td><td>এআই চ্যাট বটের ভাসমান আইকন দেখানো/লুকানো বদলায়।</td></tr>
+          <tr><td><b>ভাসমান বাটন দেখান</b></td><td>দ্রুত যোগাযোগ/চ্যাটের ভাসমান বাটন দেখানো/লুকানো বদলায়।</td></tr>
+          <tr><td><b>ডার্ক মোড / লাইট মোড</b></td><td>অ্যাপের রঙের ধরন বদলায়; আবার চাপলে আগের মোডে ফেরে।</td></tr>
+          <tr><td><b>অ্যানিমেশন</b></td><td>পেজের অ্যানিমেশন চালু/বন্ধ করে। অ্যাডমিন নিয়ন্ত্রণ বন্ধ রাখলে এটি নিষ্ক্রিয় থাকতে পারে।</td></tr>
+          <tr><td><b>সিঙ্ক</b></td><td>ক্লাউড থেকে সর্বশেষ তথ্য আনার চেষ্টা করে। “সিঙ্ক হচ্ছে…” দেখালে শেষ হওয়া পর্যন্ত অপেক্ষা করুন।</td></tr>
+          <tr><td><b>JPG</b></td><td>বর্তমানে খোলা পেজের ছবি তৈরি/ডাউনলোড করে; এটি রিসিপ্ট নয়।</td></tr>
+          <tr><td><b>প্রিন্ট</b></td><td>বর্তমান পেজের জন্য ব্রাউজারের Print/PDF উইন্ডো খোলে।</td></tr>
+          <tr><td><b>ডেক্সটপ মোড / মোবাইল মোড</b></td><td>ডেস্কটপ-ধাঁচের ও মোবাইল লেআউটের মধ্যে বদলায়।</td></tr>
+          <tr><td><b>হোম</b></td><td>আপনার অ্যাকাউন্টে নির্ধারিত হোম পেজে ফেরে।</td></tr>
+          <tr><td><b>লগ আউট</b></td><td>নিশ্চিতকরণ চাইবে। <b>লগ আউট</b> নিশ্চিত করে; না চাইলে <b>বাতিল</b> চাপুন।</td></tr>
+          <tr><td><code>×</code> বন্ধ করুন</td><td>প্যানেল বন্ধ করে আগের পেজে ফেরে।</td></tr>
+        </tbody>
+      </table></div>
+      <div class="note">অপশনগুলো অ্যাকাউন্টের ভূমিকা, অনুমতি, অ্যাডমিন সেটিংস বা ঐচ্ছিক ফিচার অনুযায়ী বদলাতে পারে। অ্যাডমিন অ্যাকাউন্টে “আমার অ্যাকাউন্ট” স্থানে “ইউজার ম্যানেজমেন্ট” দেখা যেতে পারে।</div>
+    </section>
+
+    <section id="page-menu">
+      <h2>৬ · নিচের <code>☰ মেনু</code>: সব পেজের তালিকা</h2>
+      <p>গ্রিড থেকে <b>সারসংক্ষেপ, আমার অনুদান, সদস্যবৃন্দ, মাসিক অনুদান, বার্ষিক অনুদান, ব্যয়ের হিসাব, নোটিশ, বিশেষ ঘোষণা, ইউজার, চ্যাট</b> ইত্যাদিতে যান। আপনার অনুমতি/সেটিংসে যেগুলো চালু, শুধু সেগুলোই দেখা যাবে। নোটিফিকেশন পেজে যেতে উপরের 🔔 ব্যবহার করুন, যদি সেটি আপনার অ্যাকাউন্টে দেখা যায়।</p>
+      <div class="tip">কোনো পেজ কম দেখালে বা তালিকায় না থাকলে আপনার ভূমিকা/অনুমতি যাচাইয়ের জন্য অ্যাডমিনকে জিজ্ঞাসা করুন। কোনো কার্ডে চাপলে সেই পেজ খুলবে এবং মেনু বন্ধ হবে।</div>
+    </section>
+
+    <section id="home">
+      <h2>৭ · হোম ও সারসংক্ষেপ</h2>
+      <figure><img src="screenshots/01-mobile-dashboard.png" alt="মোবাইল সারসংক্ষেপ ড্যাশবোর্ড"><figcaption>সারসংক্ষেপ, চার্ট ও তারিখ ফিল্টার।</figcaption></figure>
+      <ul>
+        <li><b>তারিখ ফিল্টার:</b> নির্দিষ্ট সময়ের তথ্য দেখতে সময়সীমা বাছুন; ফিল্টার সরালে ডিফল্ট সময়ের তথ্য ফেরে।</li>
+        <li><b>চার্ট ও সারাংশ-কার্ড:</b> তথ্য দেখায়; সাধারণত এগুলো ডেটা সম্পাদনা করে না।</li>
+        <li><b>🏠 হোম/ভাসমান হোম:</b> অন্য পেজ থেকে হোমে ফেরার শর্টকাট। ব্যক্তিগত-ভিউ অ্যাকাউন্টে এটি নিজের তথ্যের পেজে ফিরতে পারে।</li>
+      </ul>
+      <p>তথ্য না দেখালে ইন্টারনেট, অ্যাকাউন্ট অনুমতি এবং নির্বাচিত তারিখসীমা পরীক্ষা করুন।</p>
+    </section>
+
+    <section id="donations">
+      <h2>৮ · আমার অনুদান ও রিসিপ্ট</h2>
+      <figure><img src="screenshots/03-mobile-donations.png" alt="আমার অনুদান পেজ"><figcaption>নিজের সঙ্গে যুক্ত অনুদান ও রিসিপ্টের অংশ।</figcaption></figure>
+      <p>এখানে মাসিক ও বার্ষিক/এককালীন মোট, লেনদেনের তারিখ/পরিমাণ এবং উপলভ্য রিসিপ্ট-তথ্য দেখা যায়।</p>
+      <div class="split">
+        <div class="card"><strong>একটি নির্দিষ্ট লেনদেনের রিসিপ্ট</strong>রিসিপ্ট তালিকা থেকে একটি লেনদেন বাছুন → <b>এই লেনদেনের রিসিপ্ট</b> চাপুন → ডাউনলোড হওয়া JPG ফোনের Downloads/Files-এ দেখুন।</div>
+        <div class="card"><strong>সম্পূর্ণ হিসাবের রিসিপ্ট</strong><b>সম্পূর্ণ হিসাব-রিসিপ্ট</b> চাপলে আপনার হিসাবের সারাংশ JPG তৈরি হবে। “তৈরি হচ্ছে” দেখালে অপেক্ষা করুন, বারবার চাপবেন না।</div>
+      </div>
+      <div class="warning"><b>কোনো রেকর্ড পাওয়া যায়নি?</b> লগইন ইমেইলের সঙ্গে সদস্য/দাতা রেকর্ড যুক্ত না থাকলে নিজের হিসাব আসবে না। অ্যাডমিনকে ইমেইল-ম্যাচিং/সদস্য রেকর্ড যাচাই করতে বলুন।</div>
+    </section>
+
+    <section id="pages">
+      <h2>৯ · অন্যান্য পেজে কী পাবেন</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>পেজ</th><th>কী দেখবেন/করবেন</th><th>মনে রাখুন</th></tr></thead>
+        <tbody>
+          <tr><td><b>সদস্যবৃন্দ</b></td><td>সদস্য তালিকা; উপলভ্য সার্চ/ফিল্টার; কোনো সদস্যে চাপলে বিস্তারিত দেখা যেতে পারে।</td><td>ব্যক্তিগত তথ্য অনুমতির সীমায় দেখানো হয়।</td></tr>
+          <tr><td><b>মাসিক অনুদান</b></td><td>মাস/সদস্যভিত্তিক রেকর্ড, তারিখ, পরিমাণ, মাধ্যম, রিসিপ্ট নম্বর, সংগ্রাহক।</td><td>সংগ্রহ/এন্ট্রির বোতাম অনুমতিনির্ভর।</td></tr>
+          <tr><td><b>বার্ষিক অনুদান</b></td><td>বার্ষিক বা এককালীন অনুদানের তালিকা।</td><td>ভুল/অনুপস্থিত রেকর্ডের জন্য অনুরোধ পাঠান।</td></tr>
+          <tr><td><b>ব্যয়ের হিসাব</b></td><td>খরচের রেকর্ড, তারিখ/ক্যাটাগরি ও উপলভ্য সারাংশ।</td><td>ব্যয় যোগ/সম্পাদনার অনুমতি না থাকলে অ্যাডমিনের সহায়তা নিন।</td></tr>
+          <tr><td><b>নোটিশ</b></td><td>নোটিশে চাপলে বিস্তারিত; সার্চ, কপি, JPG বা প্রিন্ট বোতাম থাকতে পারে।</td><td>গুরুত্বপূর্ণ নির্দেশনা সম্পূর্ণ পড়ুন।</td></tr>
+          <tr><td><b>বিশেষ ঘোষণা</b></td><td>জরুরি/বিশেষ ঘোষণার লেখা ও ছবি পড়ুন।</td><td>যোগ/সম্পাদনা অপশন অনুমতিনির্ভর।</td></tr>
+          <tr><td><b>নোটিফিকেশন</b></td><td>অ্যাপে হওয়া পরিবর্তন/বার্তার নোটিফিকেশন দেখুন।</td><td>অনুমতি অনুযায়ী পেজটি লুকানো থাকতে পারে।</td></tr>
+          <tr><td><b>ইউজার / আমার অ্যাকাউন্ট</b></td><td>নিজের অ্যাকাউন্ট, থিম/ফন্ট, অনুরোধ বা ব্যক্তিগত অপশন দেখুন।</td><td>অ্যাডমিন অ্যাকাউন্টে নাম/কাজ আলাদা হতে পারে।</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section id="chat">
+      <h2>১০ · চ্যাট ও দ্রুত যোগাযোগ</h2>
+      <figure><img src="screenshots/11-mobile-chat.png" alt="মোবাইল চ্যাট পেজ"><figcaption>চ্যাটে গ্রুপ বা উপলভ্য ব্যক্তিগত আলাপ বেছে নিন।</figcaption></figure>
+      <ul>
+        <li>নিচের <b>চ্যাট</b> অথবা <code>☰ মেনু → চ্যাট</code> চাপুন।</li>
+        <li><b>সবার গ্রুপ</b> নির্বাচন করলে গ্রুপের আলোচনা দেখুন। ব্যক্তিগত আলাপের সুবিধা চালু থাকলে সংশ্লিষ্ট ব্যক্তিকে নির্বাচন করুন।</li>
+        <li>বার্তা লিখে কাগজের বিমান চিহ্নের <b>পাঠান</b> বোতাম চাপুন।</li>
+        <li><b>📎 ছবি পাঠান</b> বোতামে ছবি বাছুন; অ্যাপের দেখানো ফাইল-সীমা মেনে চলুন।</li>
+        <li>ভাসমান যোগাযোগ আইকন বন্ধ থাকলে <code>⋮ → ভাসমান বাটন দেখান</code> চালু করুন।</li>
+      </ul>
+      <div class="warning">বার্তা যাচ্ছে না হলে ইন্টারনেট পরীক্ষা করুন। সংবেদনশীল তথ্য বা অন্যের ব্যক্তিগত ছবি অনুমতি ছাড়া পাঠাবেন না।</div>
+    </section>
+
+    <section id="account">
+      <h2>১১ · প্রোফাইল, অনুরোধ ও নোটিফিকেশন</h2>
+      <h3>নিজের প্রোফাইল হালনাগাদ</h3>
+      <ol class="steps">
+        <li><code>⋮ → প্রোফাইল সম্পাদনা</code> খুলুন।</li>
+        <li>নাম, মোবাইল ও পিতা/স্বামীর নামের মতো সম্পাদনাযোগ্য ঘর পূরণ করুন।</li>
+        <li><b>সংরক্ষণ করুন</b> চাপুন। পরিবর্তন না করতে <b>বাতিল</b> চাপুন।</li>
+      </ol>
+      <p>গ্রুপ আইডি ও গ্রুপের দায়িত্ব অ্যাডমিন-নির্ধারিত; ব্যবহারকারী নিজে পরিবর্তন করতে পারেন না।</p>
+      <h3>ইউজার ম্যানুয়াল খুলুন</h3>
+      <p><code>⋮ → আমাদের সম্পর্কে</code> চাপুন। পরিচিতি পাতার <b>ইউজার প্যানেলের বাটন</b> অংশে <b>ইউজার ম্যানুয়াল</b> চাপলে নির্দেশিকাটি নতুন ট্যাবে খুলবে। অ্যাডমিন Facebook, X/Twitter বা অন্য সহায়ক লিংকের বাটন যোগ করে <b>“ইউজার প্যানেলে দেখান”</b> টিক দিলে সেগুলোও এখানে দেখা যাবে; টিক না থাকলে দেখা যাবে না।</p>
+      <h3>অনুরোধ পাঠানো</h3>
+      <p><code>☰ মেনু → ইউজার/আমার অ্যাকাউন্ট</code> অথবা অনুরোধের অংশ খুলুন। <b>রিকোয়েস্ট</b> বেছে বিষয় লিখে পাঠান। তালিকা থেকে অবস্থা ও উত্তর দেখুন; কথোপকথন থাকলে সেটি খুলে অ্যাডমিনের জবাব পড়ুন।</p>
+      <h3>নোটিফিকেশন</h3>
+      <p>প্রোফাইল সম্পাদনা ফর্মে <b>এই ডিভাইসে নোটিফিকেশন চালু করুন</b> বোতাম থাকলে সেটি ব্যবহার করুন। অনুমতি চাওয়া হলে আপনার পছন্দ অনুযায়ী সাড়া দিন। এরপরও না এলে প্রোফাইলের স্ট্যাটাস বার্তা দেখুন এবং অ্যাডমিন/সহায়তাকারীকে জানান।</p>
+    </section>
+
+    <section id="troubleshooting">
+      <h2>১২ · সমস্যা ও সমাধান</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>লক্ষণ</th><th>কী পরীক্ষা করবেন</th><th>পরবর্তী পদক্ষেপ</th></tr></thead>
+        <tbody>
+          <tr><td>লগইন হচ্ছে না</td><td>ইমেইল বানান, পাসওয়ার্ড, ইন্টারনেট</td><td>পাসওয়ার্ড/অ্যাকাউন্ট সমস্যা হলে অ্যাডমিনকে জানান।</td></tr>
+          <tr><td>পেজে তথ্য নেই</td><td>ইন্টারনেট, তারিখ ফিল্টার, অ্যাকাউন্ট অনুমতি</td><td>একবার রিফ্রেশ করুন; সমস্যা থাকলে পেজের নামসহ জানান।</td></tr>
+          <tr><td>নিজের অনুদান নেই</td><td>লগইন ইমেইল সদস্য-রেকর্ডের ইমেইলের সঙ্গে মেলে কি না</td><td>অ্যাডমিনকে রেকর্ড মিলিয়ে দেখতে বলুন।</td></tr>
+          <tr><td><code>Permission denied</code> / 🔒</td><td>পেজটি আপনার ভূমিকার জন্য সীমাবদ্ধ কি না</td><td>বারবার চেষ্টা না করে প্রয়োজনীয় অনুমতির জন্য অ্যাডমিনকে জানান।</td></tr>
+          <tr><td>বোতাম খুঁজে পাচ্ছি না</td><td>বোতামটি শর্তসাপেক্ষে দেখানো হয় কি না</td><td><code>⋮</code>, <code>☰ মেনু</code> ও নিচের বার আলাদা করে দেখুন; তারপরও না পেলে অ্যাডমিনকে জিজ্ঞাসা করুন।</td></tr>
+          <tr><td>রিসিপ্ট হচ্ছে না</td><td>লেনদেন বাছা হয়েছে কি না; “তৈরি হচ্ছে” দেখাচ্ছে কি না</td><td>অপেক্ষা করুন, রিফ্রেশ করে আবার চেষ্টা করুন; ত্রুটি-বার্তার ছবি দিন।</td></tr>
+          <tr><td>সার্চে ফল নেই</td><td>বানান, আইডি, মাস/তারিখ</td><td>ছোট শব্দ বা সদস্যের আইডি দিয়ে আবার খুঁজুন।</td></tr>
+          <tr><td>মেসেজ যাচ্ছে না</td><td>ইন্টারনেট, ফাইলের আকার/ধরন</td><td>সংযোগ ফিরলে আবার পাঠান; একই বার্তা বারবার দেবেন না।</td></tr>
+          <tr><td>নোটিফিকেশন পাচ্ছি না</td><td>প্রোফাইল সম্পাদনায় চালুর বোতাম ও স্ট্যাটাস</td><td>অ্যাপের বার্তা অনুযায়ী কাজ করুন; না হলে সহায়তা নিন।</td></tr>
+          <tr><td>পেজ ছোট/বড় দেখায়</td><td>ব্রাউজারের জুম ও স্ক্রিন</td><td>জুম স্বাভাবিক করুন, রিফ্রেশ করুন বা <code>⋮ → ডেক্সটপ মোড</code> বদলে দেখুন।</td></tr>
+        </tbody>
+      </table></div>
+      <div class="note">অ্যাডমিনকে জানানোর সময় পেজের নাম, কী চাপার পর সমস্যা হয়েছে এবং ত্রুটি-বার্তা দিন। পাসওয়ার্ড বা OTP দেবেন না।</div>
+    </section>
+
+    <section id="safety">
+      <h2>১৩ · নিরাপদে ব্যবহার করুন</h2>
+      <ul>
+        <li>শেয়ার করা ডিভাইসে কাজ শেষে <code>⋮ → লগ আউট</code> চাপুন এবং নিশ্চিত করুন।</li>
+        <li>পাসওয়ার্ড, OTP বা গোপন আর্থিক তথ্য চ্যাটে পাঠাবেন না।</li>
+        <li>রিসিপ্ট/বার্তা তৈরি হওয়ার সময় একই বোতাম বারবার চাপবেন না।</li>
+        <li>হিসাব সন্দেহজনক হলে সংশ্লিষ্ট তারিখ ও বিবরণসহ অ্যাডমিনকে জানান।</li>
+      </ul>
+    </section>
+    <footer class="footer"><b>PDF কপি তৈরি:</b> ব্রাউজারের Print → Save as PDF ব্যবহার করুন। <span style="float:right">ব্যবহার নির্দেশিকা · ১.২</span></footer>
+  </main>
+</article>
+</body>
+</html>
